@@ -37,6 +37,16 @@ public class Film implements Serializable {
     private String synopsis;
     private Integer annee;
     private Integer duree;
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
+    
+    
     
     @OneToMany(mappedBy = "film")
     private List<Lien> liens = new ArrayList<>();
