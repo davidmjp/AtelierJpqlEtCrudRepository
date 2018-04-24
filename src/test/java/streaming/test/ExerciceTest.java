@@ -224,7 +224,7 @@ public class ExerciceTest {
 
 17. Le nombre totals de liens pour nos films d'horreur interprétés par Polanski
 
-18. Tous les films d'horreur, sauf ceux interprétés par Polanski ( utiliser UNION ou MINUS ou INTERSECT )
+18. Tous les films d'horreur, sauf ceux interprétés par Polanski
 
 19. Parmi tous les films, uniquement ceux interprétés par Polanski  ( utiliser UNION ou MINUS ou INTERSECT )
 

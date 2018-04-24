@@ -48,7 +48,7 @@ public class JPQLTest {
         
     }
 
-    @Test
+    @Test // 25. Le nombre total d'épisodes pour chaque série, pour peu qu'il y ait plus de 5 épisodes au total. Le tout trié par nbre d'épisodes.
     public void req25() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -71,7 +71,7 @@ public class JPQLTest {
         }
     }
 
-    @Test
+    @Test // 24. Le nombre total de saisons pour chaque série, triés par ordre croissant de saisons, puis par ordre alphabétique.
     public void req24() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -92,7 +92,7 @@ public class JPQLTest {
         }
     }
 
-    @Test
+    @Test // 23. Le nombre de films réalisés pour chaque réalisateur, uniquement si >= 2 ( GROUP BY et HAVING )
     public void req23() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -114,7 +114,7 @@ public class JPQLTest {
         }
     }
 
-    @Test
+    @Test // 22. Le nombre de films réalisés pour chaque réalisateur, triés par ordre croissant puis par ordre alphabétique ( GROUP BY )
     public void req22() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -135,7 +135,7 @@ public class JPQLTest {
         }
     }
 
-    @Test
+    @Test // 21. Le nombre de films réalisés pour chaque genre ( GROUP BY )
     public void req21() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -155,7 +155,7 @@ public class JPQLTest {
         }
     }
 
-    @Test
+    @Test // 20. Tous les films interprétés par Polanski et aussi tous les films d'horreur ( utiliser UNION ou MINUS ou INTERSECT )
     public void req20() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -177,7 +177,7 @@ public class JPQLTest {
         Assert.assertEquals(1L, query.getResultList().size());
     }
 
-    @Test
+    @Test // 19. Parmi tous les films, uniquement ceux interprétés par Polanski  ( utiliser UNION ou MINUS ou INTERSECT )
     public void req19() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -197,7 +197,7 @@ public class JPQLTest {
         Assert.assertEquals(1L, query.getResultList().size());
     }
 
-    @Test
+    @Test // 18. Tous les films d'horreur, sauf ceux interprétés par Polanski
     public void req18() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -219,7 +219,7 @@ public class JPQLTest {
         Assert.assertEquals(0L, query.getResultList().size());
     }
 
-    @Test
+    @Test // 17. Le nombre totals de liens pour nos films d'horreur interprétés par Polanski
     public void req17() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -239,7 +239,7 @@ public class JPQLTest {
         Assert.assertEquals(1L, query.getSingleResult());
     }
 
-    @Test
+    @Test // 16. Le nombre total de liens pour nos films policiers américains
     public void req16() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -264,7 +264,7 @@ public class JPQLTest {
         Assert.assertEquals(3L, query.getSingleResult());
     }
 
-    @Test
+    @Test // 15. Le nombre d'épisodes de la saison 8 de la série Dexter
     public void req15() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -279,7 +279,7 @@ public class JPQLTest {
         Assert.assertEquals(12L, query.getSingleResult());
     }
 
-    @Test
+    @Test // 14. Le nombre total d'épisodes de la série Dexter
     public void req14() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -293,7 +293,7 @@ public class JPQLTest {
         Assert.assertEquals(96L, query.getSingleResult());
     }
 
-    @Test
+    @Test // 13. Le nombre de saisons de la série Dexter
     public void req13() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -308,7 +308,7 @@ public class JPQLTest {
         Assert.assertEquals(8L, query.getSingleResult());
     }
 
-    @Test
+    @Test // 12. Le nombre de films policiers réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi
     public void req12() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -341,7 +341,7 @@ public class JPQLTest {
         Assert.assertEquals(1L, query.getResultList().size());
     }
 
-    @Test
+    @Test // 11. Le nombre de films réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi
     public void req11() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -363,7 +363,7 @@ public class JPQLTest {
         Assert.assertEquals(2L, query.getSingleResult());
     }
 
-    @Test
+    @Test // 10. Le nombre de films réalisés à la fois par les 2 frères coen
     public void req10v2() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -404,7 +404,7 @@ public class JPQLTest {
         Assert.assertEquals(2L, query.getResultList().size());
     }
 
-    @Test
+    @Test // 9. Le nombre de films réalisés par joel coen
     public void req9() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -436,7 +436,7 @@ public class JPQLTest {
 //        
 //        System.err.println( "***" + l.size() );
 //    }
-//    @Test
+//    @Test  // 8. Le titre du film d'horreur anglais réalisé par roman polanski
     public void req8() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -456,7 +456,7 @@ public class JPQLTest {
         Assert.assertEquals("Le bal des vampire", titre);
     }
 
-//    @Test
+//    @Test  // 7. Nombre de films à la fois interprétés et réalisés par polanski
     public void req7() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -474,7 +474,7 @@ public class JPQLTest {
         Assert.assertEquals(1, n);
     }
 
-//    @Test
+//    @Test // 4. Nombre de liens du film 'Big Lebowski (The)'
     public void req4() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -490,7 +490,7 @@ public class JPQLTest {
         Assert.assertEquals(0, n);
     }
 
-//    @Test
+//    @Test  // 3. Année de prod mini de nos films
     public void req3() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -502,7 +502,7 @@ public class JPQLTest {
         Assert.assertEquals(1968, n);
     }
 
-//    @Test
+//    @Test  // 2. Vérifier le nombre de films
     public void req2() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
@@ -514,7 +514,7 @@ public class JPQLTest {
         Assert.assertEquals(4, n);
     }
 
-//    @Test
+//    @Test  // 1. Vérifier que le titre du film d'id 4 est "Fargo"
     public void req1() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
